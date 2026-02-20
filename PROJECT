@@ -3,7 +3,7 @@
 # and allow the plugins properly work.
 # More info: https://book.kubebuilder.io/reference/project-config.html
 cliVersion: 4.12.0
-domain: github.com/maker2413
+domain: maker2413.dev
 layout:
 - go.kubebuilder.io/v4
 projectName: kubebuilder-practice
