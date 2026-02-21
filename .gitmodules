@@ -1,3 +1,6 @@
 [submodule "guestbook"]
 	path = guestbook
 	url = git@github.com:maker2413/kubebuilder-guestbook.git
+[submodule "memcached-operator"]
+	path = memcached-operator
+	url = git@github.com:maker2413/memcached-operator.git
