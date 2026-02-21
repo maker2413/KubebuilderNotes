@@ -1,0 +1,3 @@
+[submodule "guestbook"]
+	path = guestbook
+	url = git@github.com:maker2413/kubebuilder-guestbook.git
