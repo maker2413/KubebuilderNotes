@@ -1,9 +1,14 @@
 # Kubebuilder Practice
-
 This repository exists to just allow me to write notes and build example projects while learning kubebuilder. I would not consider the information in this repository to be accurate, but I like to study in the public so if you find anything interesting here feel free to take it for your own studies.
 
-# What is a Kubernetes Operator
+# Kubebuilder commands
+The `kubebuilder` cli is used to generate most of the boilerplate for operator code as well as build out general repository structure like github actions, a Makefile, a Dockerfile, and much more.
 
+Some the important commands to know are the following:
+- `kubebuilder init --domain=<domain> --repo=<repo>`: init is what is used to build out the initial scaffolding of a repository.
+- `kubebuilder create api --group batch --version v1 --kind CronJob`: The create api command is used to add an api to your operator. In this example we would be creating a new kind called `CronJob` of the group `batch`. More information on creating APIs can be found: [here](https://book.kubebuilder.io/cronjob-tutorial/new-api).
+
+# What is a Kubernetes Operator
 An operator is a method of packaging, deploying, and managing a Kubernetes application by extending the Kubernetes API with custom resources and controllers.
 
 A kubernetes controller can be described as code that runs on a loop forever observing the state of the resources your operators are written for. If at any point the state is updated the controller compares the current state to the desired state. Because the controller has to loop forever the code should be idempotent. If it finds that their is a drift between desired state and current state the controller will update it to match desired state.
