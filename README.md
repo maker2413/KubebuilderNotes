@@ -26,7 +26,7 @@ This is called the reconciliation process.
 
 ## Reconcile loop
 
-The reconcile loop is loop we described above. We will now go over what a "happy path" for a reconcile loop looks like:
+The reconcile loop is loop we described above. In general it will follow this structure:
 ```go
 reconcile App {
 
