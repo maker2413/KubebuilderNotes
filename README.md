@@ -7,6 +7,7 @@ The `kubebuilder` cli is used to generate most of the boilerplate for operator c
 Some the important commands to know are the following:
 - `kubebuilder init --domain=<domain> --repo=<repo>`: init is what is used to build out the initial scaffolding of a repository.
 - `kubebuilder create api --group batch --version v1 --kind CronJob`: The create api command is used to add an api to your operator. In this example we would be creating a new kind called `CronJob` of the group `batch`. More information on creating APIs can be found: [here](https://book.kubebuilder.io/cronjob-tutorial/new-api).
+- `kubebuilder create webhook --group batch --version v1 --kind CronJob --defaulting --programmatic-validation`: The create webhook command is used to create the webhook server for your controller as well as adding the server to your manager and creating handlers for your webhooks. It will as register each handler with a path in your server. See also: [custom webhook paths](https://book.kubebuilder.io/cronjob-tutorial/webhook-implementation#custom-webhook-paths).
 
 # What is a Kubernetes Operator
 An operator is a method of packaging, deploying, and managing a Kubernetes application by extending the Kubernetes API with custom resources and controllers.
